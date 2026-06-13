@@ -1,0 +1,299 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    background: #1a1d24;
+}
+
+.page-container {
+    padding: 2.5rem;
+    min-height: 100vh;
+    background: #1a1d24;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 2rem;
+    padding: 1rem 1.5rem;
+
+    background: #242933;
+    border: 1px solid #374151;
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 25px rgba(
+            0,
+            0,
+            0,
+            0.15
+        );
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #d1d5db;
+
+    padding: .6rem 1rem;
+    border-radius: 8px;
+
+    transition: all .2s ease;
+}
+
+.navbar-links a:hover {
+    background: #1f2937;
+    color: white;
+}
+
+.navbar-links a.active {
+    background: #2563eb;
+    color: white;
+}
+
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.page-header p {
+    margin-top: 0.5rem;
+    color: #9ca3af;
+    font-size: 0.95rem;
+}
+
+.pricing-container {
+    padding: 2.5rem;
+    min-height: 100vh;
+    background: #1a1d24;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+}
+
+@media (max-width: 1400px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background: #242933;
+    border: 1px solid #374151;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 25px rgba(
+            0,
+            0,
+            0,
+            0.25
+        );
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card h2 {
+    margin: 0;
+    padding: 1rem 1.25rem;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+
+    color: white;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.selector {
+    padding: 1rem;
+}
+
+.selector label {
+    color: #d1d5db;
+}
+
+.selector select {
+    width: 100%;
+    padding: 10px;
+
+    background: #1f2937;
+    color: white;
+
+    border: 1px solid #4b5563;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #1f2937;
+}
+
+th {
+    color: #d1d5db;
+    border-bottom: 1px solid #374151;
+}
+
+th:first-child,
+.hours-cell {
+    text-align: center;
+    width: 120px;
+}
+
+th:last-child {
+    text-align: center;
+}
+
+td:last-child {
+    text-align: center;
+}
+
+td {
+    color: #f3f4f6;
+    border-bottom: 1px solid #374151;
+}
+
+tbody tr:hover {
+    background: #2f3642;
+}
+
+.hours-cell {
+    font-weight: 600;
+    color: #60a5fa;
+    font-size: 0.95rem;
+}
+
+.value-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    width: 140px;
+
+    padding: 10px;
+
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+
+    background: #1f2937;
+    color: white;
+
+    border: 1px solid #4b5563;
+    border-radius: 8px;
+}
+
+input:focus {
+    outline: none;
+
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 0 0 3px rgba(
+            59,
+            130,
+            246,
+            0.2
+        );
+}
+
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all .2s ease;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 1.5rem 1.5rem;
+}
+
+.actions button {
+    min-width: 160px;
+
+    background: linear-gradient(
+        135deg,
+        #10b981,
+        #059669
+    );
+
+    font-weight: 600;
+
+    box-shadow:
+        0 4px 12px rgba(
+            16,
+            185,
+            129,
+            0.25
+        );
+}
+
+.actions button:hover {
+    background: linear-gradient(
+        135deg,
+        #059669,
+        #047857
+    );
+
+    transform: translateY(-2px);
+}
