@@ -54,7 +54,7 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-###Run project
+### Run project
 ```bash
 npm run dev:fresh
 ```
