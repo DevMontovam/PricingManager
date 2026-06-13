@@ -1,3 +1,69 @@
+<p align="center">
+    <a href="https://laravel.com" target="_blank">
+        <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
+    </a>
+</p>
+
+<p align="center">
+<a href="https://github.com/DevMontovam/PricingManager/actions"><img src="https://github.com/DevMontovam/PricingManager/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://github.com/DevMontovam/PricingManager"><img src="https://img.shields.io/badge/version-1.0.0-blue" alt="Version"></a>
+<a href="https://github.com/DevMontovam/PricingManager"><img src="https://img.shields.io/badge/license-MIT-green" alt="License"></a>
+</p>
+
+## 📊 About Pricing Manager
+
+Pricing Manager is a web application built with Laravel + Vue 3 + Vite designed to manage pricing rules across municipalities and districts based on duration.
+
+The system allows:
+
+- Municipality-level pricing management
+- District-specific pricing overrides
+- Duration-based pricing (1h, 2h, 4h, 8h)
+- Default fallback pricing rules
+
+---
+
+## ⚙️ Requirements
+
+- PHP >= 8.2
+- Composer
+- Node.js >= 18
+- NPM
+- MySQL
+
+---
+
+## 🚀 Setup Instructions
+
+### Clone the repository
+
+```bash
+git clone https://github.com/DevMontovam/PricingManager.git
+cd PricingManager
+```
+
+## Install dependencies
+```bash
+composer install
+npm install
+```
+
+### Environment setup
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+###Run project
+```bash
+npm run dev:fresh
+```
+This command will:
+
+Start Laravel server
+Start Vite
+Reset database and seed data
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
